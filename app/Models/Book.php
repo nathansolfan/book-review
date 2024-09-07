@@ -9,4 +9,10 @@ class Book extends Model
 {
     // book has many review but a review has only 1 book
     use HasFactory;
+
+    public function reviews()
+    {
+        //  return HASMANY() Review model :: class
+        return $this->hasMany(Review::class);
+    }
 }
